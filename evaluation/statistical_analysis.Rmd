@@ -1,0 +1,130 @@
+---
+title: "MoE Neural Network Statistical Analysis"
+author: "Jeremy Elvander"
+date: "2026-01-26"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(stats)
+library(PMCMRplus)
+library(scmamp)
+```
+
+NH4+ =/= 0, Liq/mix, Ammonium Nitrate:
+```{r}
+#Load in data and transform into format needed for tests
+nh4_nonzero_lm_amm_nit <- read_csv('/Users/jeremyelvander/Desktop/AQRC Research/ml_files/model_training/NH4_nonzero/amm_nit/nz_lm_amm_nit_nn.csv')
+nh4_nonzero_lm_amm_nit <- nh4_nonzero_lm_amm_nit %>%
+  select(seed, neurons, test_RMSE)
+nh4_nonzero_lm_amm_nit_wide <- nh4_nonzero_lm_amm_nit %>%
+  pivot_wider(names_from=neurons, values_from=test_RMSE)
+nh4_nonzero_lm_amm_nit
+```
+
+Use friedman test as non-parametric alternative to repeated measures ANOVA
+```{r}
+friedman.test(as.matrix(nh4_nonzero_lm_amm_nit_wide[,-1]))
+```
+
+
+```{r}
+frdAllPairsNemenyiTest(y=nh4_nonzero_lm_amm_nit$test_RMSE, groups=nh4_nonzero_lm_amm_nit$neurons,
+                       blocks = nh4_nonzero_lm_amm_nit$seed)
+```
+
+Plotting CD Diagram of all pairs results.
+```{r}
+plot_matrix <- as.matrix(nh4_nonzero_lm_amm_nit_wide[,-1])
+plotCD(results.matrix = plot_matrix, alpha = 0.05)
+```
+
+
+
+NH4+ =/= 0, liq/mix, Ammonium Chloride:
+```{r}
+nh4_nonzero_lm_amm_chl <- read_csv('/Users/jeremyelvander/Desktop/AQRC Research/ml_files/model_training/NH4_nonzero/amm_chl/nz_lm_amm_chl_nn.csv')
+nh4_nonzero_lm_amm_chl <- nh4_nonzero_lm_amm_chl %>%
+  select(seed, neurons, test_RMSE)
+nh4_nonzero_lm_amm_chl
+nh4_nonzero_lm_amm_chl_wide <- nh4_nonzero_lm_amm_chl %>%
+  pivot_wider(names_from=neurons, values_from=test_RMSE)
+```
+
+```{r}
+friedman.test(as.matrix(nh4_nonzero_lm_amm_chl_wide[,-1]))
+```
+
+```{r}
+frdAllPairsNemenyiTest(y=nh4_nonzero_lm_amm_chl$test_RMSE, groups=nh4_nonzero_lm_amm_chl$neurons,
+                       blocks = nh4_nonzero_lm_amm_chl$seed)
+```
+
+
+```{r}
+plot_matrix <- as.matrix(nh4_nonzero_lm_amm_chl_wide[,-1])
+
+plotCD(results.matrix = plot_matrix, alpha = 0.05)
+```
+
+
+NH4+ =/= 0 Water content:
+```{r}
+nh4_nonzero_lm_water_content <- read_csv('/Users/jeremyelvander/Desktop/AQRC Research/ml_files/model_training/NH4_nonzero/water_content/nz_lm_water_content_nn.csv')
+nh4_nonzero_lm_water_content
+nh4_nonzero_lm_water_content <- nh4_nonzero_lm_water_content %>%
+  select(seed, neurons, test_mass_error)
+nh4_nonzero_lm_water_content_wide <- nh4_nonzero_lm_water_content %>%
+  pivot_wider(names_from=neurons, values_from=test_mass_error)
+nh4_nonzero_lm_water_content_wide
+```
+
+
+```{r}
+friedman.test(as.matrix(nh4_nonzero_lm_water_content_wide[,-1]))
+```
+
+```{r}
+frdAllPairsNemenyiTest(y=nh4_nonzero_lm_water_content$test_mass_error, groups=nh4_nonzero_lm_water_content$neurons,
+                       blocks = nh4_nonzero_lm_water_content$seed)
+```
+
+```{r}
+plot_matrix <- as.matrix(nh4_nonzero_lm_water_content_wide[,-1])
+
+plotCD(results.matrix = plot_matrix, alpha = 0.05)
+```
+
+NH4 = 0, liq/mix water content
+```{r}
+nh4_zero_lm_water_content <- read_csv('/Users/jeremyelvander/Desktop/AQRC Research/ml_files/model_training/NH4_zero/water_content/z_lm_water_content_nn.csv')
+nh4_zero_lm_water_content
+nh4_zero_lm_water_content <- nh4_zero_lm_water_content %>%
+  select(seed, neurons, test_mass_error)
+nh4_zero_lm_water_content_wide <- nh4_zero_lm_water_content %>%
+  pivot_wider(names_from=neurons, values_from=test_mass_error)
+nh4_zero_lm_water_content_wide
+```
+
+```{r}
+friedman.test(as.matrix(nh4_zero_lm_water_content_wide[,-1]))
+```
+
+
+```{r}
+frdAllPairsNemenyiTest(y=nh4_zero_lm_water_content$test_mass_error, groups=nh4_zero_lm_water_content$neurons,
+                       blocks = nh4_zero_lm_water_content$seed)
+```
+
+```{r}
+plot_matrix <- as.matrix(nh4_zero_lm_water_content_wide[,-1])
+plotCD(results.matrix = plot_matrix, alpha = 0.05)
+```
+
+
+
+
+
+
