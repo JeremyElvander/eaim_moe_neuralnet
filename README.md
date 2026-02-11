@@ -23,7 +23,9 @@ Results from this project highlight how domain-aware routing and physics-informe
 
 ## Installation
 
-This repository 
+This repository was created with Github Large File Storage (LFS). Downloading this repository may take time. 
+
+To ensure all dependencies are installed, please run pip install -r requirements.txt. Alternatively, manually install dependencies as needed. A virtual environment is recommended. 
 
 ## Usage
 
@@ -60,9 +62,6 @@ EX: {'TEMP': [mean, std],
 ## Data
 
 Example data, and data used for training, is provided in the data subdirectory.
-
-
-## License
 
 
 
