@@ -13,12 +13,11 @@ from concurrent.futures import ProcessPoolExecutor
 
 class NeuralSystem():
 
-    def prediction(self, data, seed=None):
+    def prediction(self, data):
         '''
         Method that predicts ammonium nitrate, ammonium chloride, and water content from input.
         
         :param data: n by 7 pandas df with columns [TEMP, RH, NH4+, NA+, SO42-, NO3-, CL-]
-        :param seed: optional integer seed that will make predictions reproducible
 
         Output: n by 4 predicted results
         '''
