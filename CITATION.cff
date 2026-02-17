@@ -7,6 +7,6 @@ authors:
   given-names: "A. S."
 title: "eaim_moe_neuralnet: A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics"
 version: 1.0.0
-doi: 10.5281/zenodo.18627481
+doi: 10.5281/zenodo.18665743
 date-released: 2026-02-12
 url: "https://github.com/JeremyElvander/eaim_moe_neuralnet"
