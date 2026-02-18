@@ -1,4 +1,4 @@
-# A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics
+# A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics: E-AIM MoE NeuralNet v1.0.0
 Jeremy M. Elvander and Anthony S. Wexler.
 
 Codebase developed by Jeremy M. Elvander. 
