@@ -21,7 +21,7 @@ Results from this project highlight how domain-aware routing and physics-informe
 
 If this repository is used in other research or work, please cite it as:
 
-Elvander, J. and Wexler, A. S.: Aerosol Thermodynamics Neural Network System (ATNNS): A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics, Zenodo [code], 10.5281/zenodo.18665743, 2026.
+Elvander, J. and Wexler, A. S.: Aerosol Thermodynamics Neural Network System (ATNNS): A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics, Zenodo [code], 10.5281/zenodo.18690245, 2026.
 
 '''bibtex
 @software{elvanderwexler2026eaim,
@@ -31,7 +31,7 @@ Elvander, J. and Wexler, A. S.: Aerosol Thermodynamics Neural Network System (AT
   year         = 2026,
   publisher    = {Zenodo},
   version      = {v1.0.1},
-  doi          = {10.5281/zenodo.18665743},
+  doi          = {10.5281/zenodo.18690245},
   url          = {https://github.com/JeremyElvander/ATNNS}
 }
 
