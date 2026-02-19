@@ -32,7 +32,7 @@ Elvander, J. and Wexler, A. S.: Aerosol Thermodynamics Neural Network System (AT
   publisher    = {Zenodo},
   version      = {v1.0.1},
   doi          = {10.5281/zenodo.18665743},
-  url          = {https://github.com/JeremyElvander/eaim_moe_neuralnet}
+  url          = {https://github.com/JeremyElvander/ATNNS}
 }
 
 
@@ -44,13 +44,13 @@ To ensure all dependencies are installed, please run pip install -r requirements
 
 ## Usage
 
-system.py contains the wrapper class NeuralSystem, which provides an easy interface to access the expert models through the decision-tree framework. example.ipynb includes an implementation example using training data from the project. NeuralSystem.prediction() is the primary method used for predicting thermodynamic outputs.
+system.py contains the wrapper class ATNNS, which provides an easy interface to access the expert models through the decision-tree framework. example.ipynb includes an implementation example using training data from the project. ATNNS.prediction() is the primary method used for predicting thermodynamic outputs.
 
 Repository should be cloned or forked for use. For academic or professional use of this work, please use the appropriate citation. 
 
 ### Inputs
 
-NeuralSystem within system.py takes the following inputs for the prediction method:
+ATNNS within system.py takes the following inputs for the prediction method:
 1. data: n by 7 pandas df with columns [TEMP, RH, NH4+, NA+, SO42-, NO3-, CL-].
 
 ### Outputs
