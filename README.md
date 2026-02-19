@@ -1,4 +1,4 @@
-# A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics: E-AIM MoE NeuralNet v1.0.0
+# A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics: Aerosol Thermodynamics Neural Network System (ATNNS) v1.0.1
 Jeremy M. Elvander and Anthony S. Wexler.
 
 Codebase developed by Jeremy M. Elvander. 
@@ -21,16 +21,16 @@ Results from this project highlight how domain-aware routing and physics-informe
 
 If this repository is used in other research or work, please cite it as:
 
-Elvander, J. and Wexler, A. S.: eaim_moe_neuralnet: A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics, Zenodo [code], 10.5281/zenodo.18665743, 2026.
+Elvander, J. and Wexler, A. S.: Aerosol Thermodynamics Neural Network System (ATNNS): A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics, Zenodo [code], 10.5281/zenodo.18665743, 2026.
 
 '''bibtex
 @software{elvanderwexler2026eaim,
   author       = {Elvander, J. and Wexler, A. S.},
-  title        = {{eaim_moe_neuralnet: A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics}},
+  title        = {{Aerosol Thermodynamics Neural Network System (ATNNS): A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics}},
   month        = feb,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v1.0.0},
+  version      = {v1.0.1},
   doi          = {10.5281/zenodo.18665743},
   url          = {https://github.com/JeremyElvander/eaim_moe_neuralnet}
 }

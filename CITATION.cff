@@ -5,8 +5,8 @@ authors:
   given-names: "J."
 - family-names: "Wexler"
   given-names: "A. S."
-title: "eaim_moe_neuralnet: A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics"
-version: 1.0.0
+title: "Aerosol Thermodynamics Neural Network System (ATNNS): A Python Implementation of A Mixture of Experts Neural Network Framework for Predicting Inorganic Aerosol Thermodynamics"
+version: 1.0.1
 doi: 10.5281/zenodo.18665743
 date-released: 2026-02-12
 url: "https://github.com/JeremyElvander/eaim_moe_neuralnet"

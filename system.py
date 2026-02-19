@@ -11,7 +11,7 @@ import json
 import pickle
 from concurrent.futures import ProcessPoolExecutor
 
-class NeuralSystem():
+class ATNNS():
 
     def prediction(self, data):
         '''
